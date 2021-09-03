@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "dindalove";
+    src: url(dindalove/Dindalove.ttf) format('truetype');
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "dindalove", arial;
+}

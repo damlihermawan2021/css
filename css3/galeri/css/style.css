@@ -1,0 +1,133 @@
+/* font */
+@font-face {
+    font-family: 'honey_babyregular';
+    src: url('../fonts/honey_baby-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font: 18px/36px 'honey_babyregular', arial, sans-serif;
+    background-color: darkgray;
+}
+
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+}
+
+
+.container {
+    width: 600px;
+    background-color: aliceblue;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 3px 3px rgba(14, 11, 11, .3);
+    border-radius: 5px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border: 3px solid black;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.gallery li img,
+.gallery li,
+.gallery li span {
+    border-radius: 50%;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 100px;
+    color: darkgoldenrod;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transform: scale(0) rotate(0);
+    transition: .5s;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .0);
+    z-index: 9999;
+    transition: .7s;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+}
+
+.overlay .close {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: 120px;
+    text-decoration: none;
+    color: antiquewhite;
+
+    background-color: rgba(225, 0, 0, .5);
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.overlay:target .close {
+    animation: zoomandfade .8s;
+}
+
+.overlay:target img {
+    animation: zoomandfade 1s;
+}
+
+@keyframes zoomandfade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.clear {
+    clear: both;
+}

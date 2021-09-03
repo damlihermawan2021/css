@@ -1,0 +1,11 @@
+h1 {
+    font-family: arial, Verdana, Tahoma, sans-serif;
+    font-size: 100px;
+    font-weight: normal;
+    font-style: bold;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1000px;
+}
